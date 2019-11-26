@@ -1,0 +1,46 @@
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+/****************/
+/* Mobile first */
+/****************/
+
+html,
+body,
+main {
+  height: 100%;
+  background-color: #fff;
+}
+
+/* "copyright" at the bottom */
+.bottom-line {
+  @apply w-full px-4 mt-12 p-2 border-t;
+  @apply flex items-center justify-end mt-auto;
+
+  & span {
+    font-size: 0.6em;
+  }
+
+  & img {
+    width: 78px;
+  }
+
+  & * {
+    margin: 2px;
+  }
+}
+
+.heroicon-ui-mail {
+  fill: #fff;
+}
+
+/**********************/
+/* Other screen sizes */
+/**********************/
+
+@screen sm {
+  .bottom-line {
+    @apply px-6;
+  }
+}

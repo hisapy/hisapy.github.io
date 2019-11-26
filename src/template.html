@@ -1,0 +1,76 @@
+<%
+	const PAGE_LANG = htmlWebpackPlugin.options.language;
+	const isEs = PAGE_LANG.startsWith("es");
+%>
+
+<!DOCTYPE html>
+<html lang="<%= PAGE_LANG %>" class="text-gray-900 antialiased leading-tight">
+
+<head>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-73422491-5"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+    gtag('config', 'UA-73422491-5');
+  </script>
+
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>tailwindcss-html</title>
+  <meta name="description" content="<%= require(`./partials/meta-description-content-${PAGE_LANG}.html`) %>">
+
+  <!--[if lt IE 9]>
+			<script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/r29/html5.min.js"></script>
+		<![endif]-->
+</head>
+
+<body>
+  <div class="w-full px-6 pt-5 text-right font-medium absolute">
+    <a id="lang-switch" class="text-blue-500 text-xs hover:text-blue-800"
+      href="<%= isEs ? '/' : '/es' %>"><%=isEs ? 'view in English' : 'ver en Español' %></a>
+  </div>
+
+  <main role="main" class="flex flex-col px-10 lg:px-24">
+    <h1 class="text-3xl text-center w-full mt-16 mb-8 font-bold lg:mt-24">tailwindcss-html</h1>
+
+    <h2 class="text-xl text-center <%= PAGE_LANG %>">
+      <%= require(`./partials/subheading-${PAGE_LANG}.html`) %>
+    </h2>
+
+    <div class="ml-auto mr-auto">
+      <img src="/<%= require('./images/logo-tailwindcss.png') %>" alt="TailwindCSS's logo" />
+    </div>
+
+    <p class="my-4 text-base"><%= require(`./partials/instructions-${PAGE_LANG}.html`) %></p>
+
+    <p class="text-base mb-8">
+      <%= isEs 
+          ? 'Para más información ver el'
+          : 'Fore more info see the'
+        %>
+      <a class="text-blue-500 underline" href="https://github.com/iporaitech/tailwindcss-html/blob/master/README.md">
+        README
+      </a>
+    </p>
+
+
+    <div class="bottom-line">
+      <span>
+        <%= isEs 
+          ? 'Creado por'
+          : 'Created by'
+        %>
+      </span>
+      <img src="/<%= require('./images/logo-iporaitech.svg') %>" alt="Iporaitech's logo" />
+    </div>
+  </main>
+</body>
+
+</html>
