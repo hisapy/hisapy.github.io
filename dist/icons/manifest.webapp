@@ -1,0 +1,14 @@
+{
+  "version": "0.1.0",
+  "name": "tailwindcss-html",
+  "description": "Simple boilerplate to create static html website styled with TailwindCSS",
+  "icons": {
+    "60": "/icons/firefox_app_60x60.png",
+    "128": "/icons/firefox_app_128x128.png",
+    "512": "/icons/firefox_app_512x512.png"
+  },
+  "developer": {
+    "name": "hisa",
+    "url": null
+  }
+}
