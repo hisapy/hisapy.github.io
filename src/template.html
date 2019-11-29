@@ -24,7 +24,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <title>Hisa Ishibashi</title>
-  <meta name="description" content="<%= require(`./partials/meta-description-content-${PAGE_LANG}.html`) %>">
+  <meta name="description" content="Hisa Ishibashi's portfolio page">
 
   <!--[if lt IE 9]>
 			<script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/r29/html5.min.js"></script>
@@ -32,34 +32,14 @@
 </head>
 
 <body>
-  <div class="w-full px-6 pt-5 text-right font-medium absolute">
-    <a id="lang-switch" class="text-blue-500 text-xs hover:text-blue-800"
-      href="<%= isEs ? '/' : '/es' %>"><%=isEs ? 'view in English' : 'ver en Español' %></a>
-  </div>
-
   <main role="main" class="flex flex-col px-10 lg:px-24">
     <h1 class="text-3xl text-center w-full mt-16 mb-8 font-bold lg:mt-24">Hisa Ishibashi</h1>
 
     <h2 class="text-xl text-center <%= PAGE_LANG %>">
-      This is Hisa's portfolio built with tailwindcss-html and now deploying to github pages
+      Software Developer working mainly on full-stack web development with startup mindset and some artistic skills,
+      trying to
+      figure out the architecture and balance of things
     </h2>
-
-    <div class="ml-auto mr-auto">
-      <img src="/<%= require('./images/logo-tailwindcss.png') %>" alt="TailwindCSS's logo" />
-    </div>
-
-    <p class="my-4 text-base"><%= require(`./partials/instructions-${PAGE_LANG}.html`) %></p>
-
-    <p class="text-base mb-8">
-      <%= isEs 
-          ? 'Para más información ver el'
-          : 'Fore more info see the'
-        %>
-      <a class="text-blue-500 underline" href="https://github.com/iporaitech/tailwindcss-html/blob/master/README.md">
-        README
-      </a>
-    </p>
-
 
     <div class="bottom-line">
       <span>
@@ -68,7 +48,6 @@
           : 'Created by'
         %>
       </span>
-      <img src="/<%= require('./images/logo-iporaitech.svg') %>" alt="Iporaitech's logo" />
     </div>
   </main>
 </body>
