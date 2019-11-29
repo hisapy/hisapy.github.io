@@ -8,10 +8,10 @@ const path = require("path");
 module.exports = {
   context: path.resolve(__dirname, "src"),
   entry: "./index.js",
-  output: {
-    filename: "main-[contenthash].js",
-    path: path.resolve(__dirname, "dist")
-  },
+  // output: {
+  //   filename: "main-[contenthash].js",
+  //   path: path.resolve(__dirname, "dist")
+  // },
   plugins: [
     new webpack.IgnorePlugin(/(\.flow|\.ts)$/),
     new CleanWebpackPlugin(),

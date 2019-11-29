@@ -9,6 +9,10 @@ const CopyWebpackPlugin = require("copy-webpack-plugin");
 module.exports = merge(baseConfig, {
   mode: "production",
   devtool: "source-map",
+  output: {
+    filename: "main-[contenthash].js",
+    path: path.resolve(__dirname, "dist")
+  },
   optimization: {
     minimizer: [
       new UglifyJsPlugin({
