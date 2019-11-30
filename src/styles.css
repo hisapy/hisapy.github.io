@@ -13,34 +13,41 @@ main {
   background-color: #fff;
 }
 
-/* "copyright" at the bottom */
-.bottom-line {
-  @apply w-full px-4 mt-12 p-2 border-t;
-  @apply flex items-center justify-end mt-auto;
-
-  & span {
-    font-size: 0.6em;
+.icon {
+  @apply p-2 rounded-lg overflow-hidden;
+  & svg {
+    @apply fill-current text-white;
   }
 
-  & img {
-    width: 78px;
+  &.github {
+    background-color: #181717;
   }
 
-  & * {
-    margin: 2px;
+  &.stackoverflow {
+    background-color: #fe7a16;
+  }
+
+  &.youtube {
+    background-color: #ff0000;
+  }
+
+  &.twitter {
+    background-color: #1da1f2;
+  }
+
+  &.medium {
+    @apply p-0;
+    & svg {
+      fill: currentColor;
+      color: #12100e;
+    }
   }
 }
 
-.heroicon-ui-mail {
-  fill: #fff;
+.hashtag {
+  @apply inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 m-2;
 }
 
 /**********************/
 /* Other screen sizes */
 /**********************/
-
-@screen sm {
-  .bottom-line {
-    @apply px-6;
-  }
-}
