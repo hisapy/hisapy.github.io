@@ -14,7 +14,9 @@ main {
 }
 
 .icon {
-  @apply p-2 rounded-lg overflow-hidden;
+  @apply p-2 rounded-lg overflow-hidden ml-auto mr-auto;
+  max-width: 86px;
+
   & svg {
     @apply fill-current text-white;
   }
