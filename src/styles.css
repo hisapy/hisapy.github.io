@@ -13,6 +13,22 @@ main {
   background-color: #fff;
 }
 
+.card-head {
+  @apply flex flex-wrap flex-col;
+
+  & img {
+    @apply w-full flex-1;
+  }
+
+  & .description {
+    @apply px-6 py-4 flex-1;
+  }
+}
+
+.links {
+  @apply px-6 py-4 flex flex-wrap justify-around;
+}
+
 .icon {
   @apply p-2 rounded-lg overflow-hidden ml-auto mr-auto;
   max-width: 86px;
@@ -58,6 +74,28 @@ main {
   @apply inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 m-2;
 }
 
-/**********************/
-/* Other screen sizes */
-/**********************/
+/*************************************/
+/* Other screen sizes & orientations */
+/*************************************/
+
+@media (orientation: landscape) {
+  .card-head {
+    @apply flex-row;
+
+    & img {
+      order: 1;
+      width: 42%;
+    }
+
+    & .description {
+      @apply flex flex-col justify-center;
+      & h3 {
+        @apply py-3;
+      }
+    }
+  }
+
+  .links a {
+    @apply w-1/3;
+  }
+}
