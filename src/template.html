@@ -27,8 +27,8 @@
 </head>
 
 <body>
-  <main role="main" class="px-1">
-    <div class="card">
+  <main role="main" class="px-1 md:pt-2 pb-4">
+    <div class="card xl:w-2/3">
       <div class="card-head">
         <img class="rounded-sm" src="<%= require('./images/hisa_avatar.jpg') %>"
           alt="Avatar of Hisa Ishibashi drawn by Clara Müller">
@@ -46,7 +46,9 @@
 
 
       <div class="links">
-        <h3 class="w-full text-lg text-center font-semibold">Check me out on</h3>
+        <h3 class="w-full text-lg text-center font-semibold md:mt-4 md:mb-6 lg:mt-6 lg:mb-10">
+          Check me out on
+        </h3>
         <a class="w-1/2 p-6" href="https://github.com/hisapy">
           <div class="icon github">
             <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -103,7 +105,7 @@
         </a>
       </div>
 
-      <div class="px-6 py-4 flex flex-wrap justify-between">
+      <div class="px-6 py-4 flex flex-wrap justify-around md:px-12 lg:px-24 lg:pt-8">
         <span class="hashtag">#Software</span>
         <span class="hashtag">#Music</span>
         <span class="hashtag">#Startups</span>
@@ -114,7 +116,7 @@
         <span class="hashtag">#Screenwriting</span>
       </div>
 
-      <div class="p-4 text-center font-bold text-gray-800">
+      <div class="w-full p-4 text-center font-bold text-gray-800 mt-auto">
         v0.1.0
       </div>
     </div>

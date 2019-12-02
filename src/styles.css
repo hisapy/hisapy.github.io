@@ -16,7 +16,7 @@ main {
 .card {
   @apply rounded bg-white shadow-lg;
   @apply w-full mb-2 mx-auto;
-  @apply flex flex-col justify-between;
+  @apply flex flex-col;
 }
 
 .card-head {
@@ -84,7 +84,21 @@ main {
 /* Other screen sizes & orientations */
 /*************************************/
 
-@media (orientation: landscape), (min-width: 768px) {
+@media (orientation: portrait) {
+  @screen md {
+    .card {
+      height: 99%;
+    }
+  }
+
+  @screen lg {
+    .card {
+      height: 90%;
+    }
+  }
+}
+
+@media (min-width: 480px) {
   .card-head {
     @apply flex-row;
 
@@ -107,25 +121,46 @@ main {
   }
 }
 
+@screen sm {
+  .card-head {
+    @apply justify-around;
+
+    & img {
+      width: 36%;
+      @apply pr-6;
+    }
+  }
+}
+
 @screen md {
   .card {
     @apply w-4/5  mb-3;
-    height: 99%;
+  }
+
+  .card-head {
+    & img {
+      max-width: 228px;
+    }
+  }
+
+  .links {
+    @apply px-12;
   }
 }
 
 @screen lg {
   .card {
-    height: auto;
+    @apply px-16;
   }
-  .card-head {
-    @apply justify-around;
 
+  .card-head {
     & img {
       width: 30%;
+      max-width: 236px;
     }
   }
+
   .links {
-    @apply px-24;
+    @apply py-12;
   }
 }
