@@ -4,8 +4,13 @@ module.exports = {
     sourceType: "module"
   },
   env: {
-    es6: true
+    es6: true,
+    amd: true,
+    node: true
   },
-  extends: ["prettier"],
-  plugins: ["import", "prettier"]
+  extends: ["prettier", "eslint:recommended"],
+  plugins: ["import", "prettier"],
+  rules: {
+    "prettier/prettier": "error"
+  }
 };

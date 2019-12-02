@@ -5,6 +5,7 @@ const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const merge = require("webpack-merge");
 const baseConfig = require("./webpack.baseConfig.js");
 const CopyWebpackPlugin = require("copy-webpack-plugin");
+const path = require("path");
 
 module.exports = merge(baseConfig, {
   mode: "production",
