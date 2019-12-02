@@ -10,18 +10,24 @@ html,
 body,
 main {
   height: 100%;
-  background-color: #fff;
+  background-color: #00bcd4;
+}
+
+.card {
+  @apply rounded bg-white shadow-lg;
+  @apply w-full mb-2 mx-auto;
+  @apply flex flex-col justify-between;
 }
 
 .card-head {
   @apply flex flex-wrap flex-col;
 
   & img {
-    @apply w-full flex-1;
+    @apply w-full;
   }
 
   & .description {
-    @apply px-6 py-4 flex-1;
+    @apply px-6 py-4;
   }
 }
 
@@ -30,7 +36,7 @@ main {
 }
 
 .icon {
-  @apply p-2 rounded-lg overflow-hidden ml-auto mr-auto;
+  @apply p-2 rounded-lg overflow-hidden mx-auto;
   max-width: 86px;
 
   & svg {
@@ -78,7 +84,7 @@ main {
 /* Other screen sizes & orientations */
 /*************************************/
 
-@media (orientation: landscape) {
+@media (orientation: landscape), (min-width: 768px) {
   .card-head {
     @apply flex-row;
 
@@ -89,6 +95,7 @@ main {
 
     & .description {
       @apply flex flex-col justify-center;
+      width: 58%;
       & h3 {
         @apply py-3;
       }
@@ -97,5 +104,28 @@ main {
 
   .links a {
     @apply w-1/3;
+  }
+}
+
+@screen md {
+  .card {
+    @apply w-4/5  mb-3;
+    height: 99%;
+  }
+}
+
+@screen lg {
+  .card {
+    height: auto;
+  }
+  .card-head {
+    @apply justify-around;
+
+    & img {
+      width: 30%;
+    }
+  }
+  .links {
+    @apply px-24;
   }
 }
