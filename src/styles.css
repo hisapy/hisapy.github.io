@@ -13,6 +13,11 @@ main {
   background-color: #00bcd4;
 }
 
+#hire-me {
+  opacity: 1;
+  transition: opacity 500ms linear;
+}
+
 .card {
   @apply rounded bg-white shadow-lg;
   @apply w-full mb-2 mx-auto;
