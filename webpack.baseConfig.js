@@ -16,7 +16,7 @@ module.exports = {
       template: "template.html"
     }),
     new FaviconsWebpackPlugin({
-      logo: "./images/favicon.png",
+      logo: "./images/profile_pic.jpg",
       background: "#fff",
       prefix: "icons/"
     })
