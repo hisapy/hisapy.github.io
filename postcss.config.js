@@ -7,7 +7,7 @@ const purgecss = require("@fullhuman/postcss-purgecss")({
   // whitelistPatternsChildren: [/^medium\-widget/]
 });
 
-module.exports = ctx => {
+module.exports = api => {
   return {
     plugins: [
       require("postcss-import"),
@@ -15,8 +15,8 @@ module.exports = ctx => {
       require("postcss-nesting"),
       require("tailwindcss"),
       require("autoprefixer"),
-      ...(ctx.webpack.mode === "production" ? [purgecss] : []),
-      ...(ctx.webpack.mode === "production"
+      ...(api.mode === "production" ? [purgecss] : []),
+      ...(api.mode === "production"
         ? [require("cssnano")({ preset: "default" })]
         : [])
     ]

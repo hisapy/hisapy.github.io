@@ -17,6 +17,7 @@ module.exports = {
       template: "template.html"
     }),
     new FaviconsWebpackPlugin({
+      mode: "auto",
       logo: "./images/profile_pic.jpg",
       background: "#fff",
       prefix: "icons/"
@@ -42,7 +43,8 @@ module.exports = {
             loader: "file-loader",
             options: {
               name: "[name].[ext]",
-              outputPath: "./images/"
+              outputPath: "./images/",
+              esModule: false
             }
           }
         ]

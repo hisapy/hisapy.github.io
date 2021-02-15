@@ -6,7 +6,8 @@ module.exports = {
   env: {
     es6: true,
     amd: true,
-    node: true
+    node: true,
+    browser: true
   },
   extends: ["prettier", "eslint:recommended"],
   plugins: ["import", "prettier"],
