@@ -4,3 +4,4 @@ See [GitHub Pages with Webpack, from template repo, without Jekyll](https://medi
 
 This repo has been generated from https://github.com/iporaitech/tailwindcss-html. See its README for instructions.
 
+To enable For Hire put `forHire: true` in `HtmlWebpackPlugin` options in webpack.baseConfig.js

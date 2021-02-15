@@ -13,6 +13,7 @@ module.exports = {
     new CleanWebpackPlugin(),
     new HtmlWebpackPlugin({
       // language: "en"
+      forHire: false,
       template: "template.html"
     }),
     new FaviconsWebpackPlugin({
