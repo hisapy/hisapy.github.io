@@ -1,0 +1,2 @@
+!function(){"use strict";window.onload=function(){e()};var e=function(){var e=document.querySelector("#hire-me .close-btn");e&&(e.onclick=function(){var e=document.querySelector("#hire-me");e.style.opacity="0",setTimeout((function(){e.parentNode.removeChild(e)}),500)})}}();
+//# sourceMappingURL=main-0da5bf6721960aa92d7e.js.map
