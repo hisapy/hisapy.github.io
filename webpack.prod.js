@@ -2,7 +2,7 @@ const webpack = require("webpack");
 const TerserPlugin = require("terser-webpack-plugin");
 const OptimizeCSSAssetsPlugin = require("optimize-css-assets-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
-const merge = require("webpack-merge");
+const { merge } = require("webpack-merge");
 const baseConfig = require("./webpack.baseConfig.js");
 const CopyWebpackPlugin = require("copy-webpack-plugin");
 const path = require("path");
@@ -18,9 +18,7 @@ module.exports = merge(baseConfig, {
     minimize: true,
     minimizer: [
       new TerserPlugin({
-        cache: true,
-        parallel: true,
-        sourceMap: true // set to true if you want JS source maps
+        parallel: true
       }),
       new OptimizeCSSAssetsPlugin({
         cssProcessorOptions: {
@@ -41,7 +39,9 @@ module.exports = merge(baseConfig, {
       "process.env.NODE_ENV": JSON.stringify("production")
     }),
     // .nojekyll is to indicate GH Pages we're not using Jekyll
-    new CopyWebpackPlugin([".nojekyll"])
+    new CopyWebpackPlugin({
+      patterns: [{ from: ".nojekyll" }]
+    })
   ],
   module: {
     rules: [

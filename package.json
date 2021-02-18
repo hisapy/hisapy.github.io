@@ -1,6 +1,6 @@
 {
   "name": "tailwindcss-html",
-  "version": "0.1.0",
+  "version": "0.1.4",
   "description": "Simple boilerplate to create static html website styled with TailwindCSS",
   "main": "index.js",
   "repository": "git@github.com:iporaitech/tailwindcss-html.git",
@@ -11,7 +11,7 @@
   ],
   "scripts": {
     "dev": "webpack serve --hot --config webpack.dev.js",
-    "build:prod": "webpack -p --progress --color --config webpack.prod.js"
+    "build:prod": "webpack --mode production --progress --color --config webpack.prod.js"
   },
   "devDependencies": {
     "@babel/core": "^7.6.4",
@@ -47,6 +47,7 @@
     "webpack-merge": "^5.7.3"
   },
   "dependencies": {
+    "favicons": "^6.2.1",
     "postcss": "^8.2.6",
     "tailwindcss": "^2.0.3"
   }
