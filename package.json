@@ -48,7 +48,7 @@
   },
   "dependencies": {
     "favicons": "^6.2.1",
-    "postcss": "^8.2.6",
+    "postcss": "^8.2.10",
     "tailwindcss": "^2.0.3"
   }
 }
